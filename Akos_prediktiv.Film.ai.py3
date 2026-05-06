@@ -1,0 +1,43 @@
+movies = [
+  { "title": "Rush", "genre": "Action", "age": "15+", "runtime": "2:03" },
+  { "title": "Rush Hour", "genre": "Comedy", "age": "13+", "runtime": "1:38" },
+  { "title": "John Wick", "genre": "Action", "age": "17+", "runtime": "1:41" },
+  { "title": "Cars", "genre": "Adventure", "age": "All ages", "runtime": "1:57" },
+  { "title": "Puss in Boots", "genre": "Adventure", "age": "7+", "runtime": "1:30" },
+  { "title": "The Terminator", "genre": "Action", "age": "17+", "runtime": "1:47" },
+  { "title": "Terminator 2: Judgment Day", "genre": "Action", "age": "15+", "runtime": "2:17" },
+  { "title": "Terminator 3: Rise of the Machines", "genre": "Action", "age": "13+", "runtime": "1:49" },
+  { "title": "Cars 2", "genre": "Adventure", "age": "6+", "runtime": "1:46" },
+  { "title": "The Matrix", "genre": "Action", "age": "15+", "runtime": "2:16" }
+]
+
+while True:
+    genre = input("What genre do you like? (or q to quit)\n")
+    
+    if genre.lower() == "q":
+        print("Program stopped.")
+        break
+
+    age = input("What age restriction?\n")
+    runtime = input("Whats your desired movie length (hours:min)\n")
+
+    best_score = 0
+    best_movie = ""
+
+    for movie in movies:
+        score = 0
+
+        if movie["genre"] == genre:
+            score += 2
+
+        if movie["age"] == age:
+            score += 1
+
+        if movie["runtime"] == runtime:
+            score +=1
+
+        if score > best_score:
+            best_score = score
+            best_movie = movie["title"]
+
+    print("We recommend", best_movie)
