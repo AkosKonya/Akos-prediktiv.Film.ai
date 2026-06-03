@@ -1,0 +1,145 @@
+# genre, åldersgräns, speltid, utgivningsår, IMDb-betyg,
+# språk och om filmen är animerad eller inte.
+
+movies = [
+    {"title": "Rush", "genre": "Action", "age": "15+", "runtime": "2:03", "year": 2013, "rating": 8.1, "language": "English", "animated": "No"},
+    {"title": "Rush Hour", "genre": "Comedy", "age": "13+", "runtime": "1:38", "year": 1998, "rating": 7.0, "language": "English", "animated": "No"},
+    {"title": "John Wick", "genre": "Action", "age": "17+", "runtime": "1:41", "year": 2014, "rating": 7.4, "language": "English", "animated": "No"},
+    {"title": "Cars", "genre": "Adventure", "age": "All ages", "runtime": "1:57", "year": 2006, "rating": 7.2, "language": "English", "animated": "Yes"},
+    {"title": "Puss in Boots", "genre": "Adventure", "age": "7+", "runtime": "1:30", "year": 2011, "rating": 6.6, "language": "English", "animated": "Yes"},
+    {"title": "The Terminator", "genre": "Action", "age": "17+", "runtime": "1:47", "year": 1984, "rating": 8.1, "language": "English", "animated": "No"},
+    {"title": "Terminator 2: Judgment Day", "genre": "Action", "age": "15+", "runtime": "2:17", "year": 1991, "rating": 8.6, "language": "English", "animated": "No"},
+    {"title": "Terminator 3: Rise of the Machines", "genre": "Action", "age": "13+", "runtime": "1:49", "year": 2003, "rating": 6.3, "language": "English", "animated": "No"},
+    {"title": "Cars 2", "genre": "Adventure", "age": "6+", "runtime": "1:46", "year": 2011, "rating": 6.2, "language": "English", "animated": "Yes"},
+    {"title": "The Matrix", "genre": "Action", "age": "15+", "runtime": "2:16", "year": 1999, "rating": 8.7, "language": "English", "animated": "No"},
+    {"title": "Mad Max: Fury Road", "genre": "Action", "age": "15+", "runtime": "2:00", "year": 2015, "rating": 8.1, "language": "English", "animated": "No"},
+    {"title": "Spider-Man: Into the Spider-Verse", "genre": "Adventure", "age": "10+", "runtime": "1:57", "year": 2018, "rating": 8.4, "language": "English", "animated": "Yes"},
+    {"title": "Gladiator", "genre": "Action", "age": "16+", "runtime": "2:35", "year": 2000, "rating": 8.5, "language": "English", "animated": "No"},
+    {"title": "Finding Nemo", "genre": "Adventure", "age": "All ages", "runtime": "1:40", "year": 2003, "rating": 8.2, "language": "English", "animated": "Yes"},
+    {"title": "Shrek", "genre": "Comedy", "age": "7+", "runtime": "1:30", "year": 2001, "rating": 7.9, "language": "English", "animated": "Yes"},
+    {"title": "Mission: Impossible", "genre": "Action", "age": "13+", "runtime": "1:50", "year": 1996, "rating": 7.1, "language": "English", "animated": "No"},
+    {"title": "The Dark Knight", "genre": "Action", "age": "13+", "runtime": "2:32", "year": 2008, "rating": 9.0, "language": "English", "animated": "No"},
+    {"title": "Kung Fu Panda", "genre": "Adventure", "age": "7+", "runtime": "1:32", "year": 2008, "rating": 7.6, "language": "English", "animated": "Yes"},
+    {"title": "Toy Story", "genre": "Adventure", "age": "All ages", "runtime": "1:21", "year": 1995, "rating": 8.3, "language": "English", "animated": "Yes"},
+    {"title": "Guardians of the Galaxy", "genre": "Action", "age": "13+", "runtime": "2:01", "year": 2014, "rating": 8.0, "language": "English", "animated": "No"},
+    {"title": "Jurassic Park", "genre": "Adventure", "age": "13+", "runtime": "2:07", "year": 1993, "rating": 8.2, "language": "English", "animated": "No"},
+    {"title": "Deadpool", "genre": "Comedy", "age": "17+", "runtime": "1:48", "year": 2016, "rating": 8.0, "language": "English", "animated": "No"},
+    {"title": "Avengers: Endgame", "genre": "Action", "age": "13+", "runtime": "3:01", "year": 2019, "rating": 8.4, "language": "English", "animated": "No"},
+    {"title": "How to Train Your Dragon", "genre": "Adventure", "age": "7+", "runtime": "1:38", "year": 2010, "rating": 8.1, "language": "English", "animated": "Yes"},
+    {"title": "Pirates of the Caribbean: The Curse of the Black Pearl", "genre": "Adventure", "age": "13+", "runtime": "2:23", "year": 2003, "rating": 8.1, "language": "English", "animated": "No"},
+    {"title": "Jumanji: Welcome to the Jungle", "genre": "Comedy", "age": "12+", "runtime": "1:59", "year": 2017, "rating": 6.9, "language": "English", "animated": "No"},
+    {"title": "Top Gun: Maverick", "genre": "Action", "age": "13+", "runtime": "2:11", "year": 2022, "rating": 8.3, "language": "English", "animated": "No"},
+    {"title": "The Incredibles", "genre": "Adventure", "age": "All ages", "runtime": "1:55", "year": 2004, "rating": 8.0, "language": "English", "animated": "Yes"},
+    {"title": "Men in Black", "genre": "Comedy", "age": "12+", "runtime": "1:38", "year": 1997, "rating": 7.3, "language": "English", "animated": "No"},
+    {"title": "Ready Player One", "genre": "Action", "age": "13+", "runtime": "2:20", "year": 2018, "rating": 7.4, "language": "English", "animated": "No"}
+]
+
+# Programmet fortsätter att köras tills användaren väljer att avsluta.
+while True:
+
+    # Frågar användaren vilken genre de föredrar.
+    genre = input("What genre do you like?\n")
+
+    # Frågar efter önskad åldersgräns.
+    age = input("What age restriction?\n")
+
+    # Frågar vilket språk filmen ska vara på.
+    language = input("What language do you want?\n")
+
+    # Frågar om användaren vill ha en animerad film eller inte.
+    animated = input("Animated movie? (Yes/No)\n")
+
+    # Försöker läsa in användarens minsta önskade IMDb-betyg.
+    try:
+        rating = float(input("Minimum IMDb rating?\n"))
+
+    # Om användaren inte skriver ett giltigt tal visas ett felmeddelande.
+    except ValueError:
+        print("Please enter a valid number.")
+        continue
+
+    # Lista som ska innehålla filmernas poäng och information.
+    scored_movies = []
+
+    # Går igenom alla filmer i listan.
+    for movie in movies:
+
+        # Hoppar över filmer som har lägre betyg än användaren önskar.
+        if movie["rating"] < rating:
+            continue
+
+        # Varje film börjar med 0 poäng.
+        score = 0
+
+        # Om genren matchar får filmen 2 poäng.
+        if movie["genre"].lower() == genre.lower():
+            score += 2
+
+        # Om åldersgränsen matchar får filmen 1 poäng.
+        if movie["age"].lower() == age.lower():
+            score += 1
+
+        # Om språket matchar får filmen 1 poäng.
+        if movie["language"].lower() == language.lower():
+            score += 1
+
+        # Om filmen är animerad eller inte enligt användarens önskemål får den 1 poäng.
+        if movie["animated"].lower() == animated.lower():
+            score += 1
+
+        # Lägger till en liten bonus baserad på IMDb-betyget.
+        score += movie["rating"] / 10
+
+        # Sparar filmens poäng tillsammans med filmens information.
+        scored_movies.append((score, movie))
+
+    # Sorterar filmerna från högst poäng till lägst poäng.
+    scored_movies.sort(reverse=True, key=lambda x: x[0])
+
+    # Om inga filmer matchade användarens krav visas ett meddelande.
+    if len(scored_movies) == 0:
+        print("\nNo movies matched your search.\n")
+        continue
+
+    # Rubrik för rekommendationerna.
+    print("\nWe recommend these movies:\n")
+
+    # Hjelp av AI.
+    for i, (_, movie) in enumerate(scored_movies[:3], start=1):
+
+        # Skriver ut filmens placering och titel.
+        print(f"{i}. {movie['title']}")
+
+        # Skriver ut filmens genre.
+        print(f"Genre: {movie['genre']}")
+
+        # Skriver ut filmens åldersgräns.
+        print(f"Age: {movie['age']}")
+
+        # Skriver ut filmens längd.
+        print(f"Runtime: {movie['runtime']}")
+
+        # Skriver ut vilket år filmen släpptes.
+        print(f"Year: {movie['year']}")
+
+        # Skriver ut filmens IMDb-betyg.
+        print(f"IMDb Rating: {movie['rating']}")
+
+        # Skriver ut filmens språk.
+        print(f"Language: {movie['language']}")
+
+        # Skriver ut om filmen är animerad eller inte.
+        print(f"Animated: {movie['animated']}")
+
+        # Tom rad för att göra utskriften mer lättläst.
+        print()
+
+    # Frågar användaren om de vill få fler rekommendationer.
+    continue_choice = input("Do you want more movie recommendations? (Yes/No)\n")
+
+    # Om användaren inte svarar "yes" avslutas programmet.
+    if continue_choice.lower() != "yes":
+        print("Program stopped.")
+        break
+
+        #Idag har jag gjordt koden finare och fixa problemet der den slutade ge mig tre film rekommendationer pa en och samma gang.
